@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    showPosition(position);
+                    // After setting the position, submit the form
+                    document.getElementById("myForm").submit();
+                }, function(error) {
+                    console.error("Error getting geolocation:", error);
+                    alert("Failed to get geolocation. Please allow location access.");
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+            return false; // Prevent default form submission
+        }
+    
+        function showPosition(position) {
+            const latInput = document.getElementById("lat");
+            const lngInput = document.getElementById("lng");
+            latInput.value = position.coords.latitude;
+            lngInput.value = position.coords.longitude;
+        }
+    </script>
+    
+    <form id="myForm" action="gethousedata.php" method="POST" onsubmit="return getLocation()">
+        <!-- Hidden input fields to store lat and lng values -->
+        <input type="hidden" id="lng" name="lng">
+        <input type="hidden" id="lat" name="lat">
+    
+        <!-- Other form fields -->
+        <label for="surface">Surface: </label>
+        <input type="text" name="surface"><br>
+    
+        <label for="region">Region: </label>
+        <input type="text" name="region"><br>
+    
+        <label for="prix">Prix: </label>
+        <input type="text" name="prix"><br>
+    
+        <label for="nbchambre">Nombre de chambres: </label>
+        <input type="text" name="nbchambre"><br>
+    
+        <label for="pic">Pic: </label>
+        <input type="text" name="pic"><br>
+    
+        <label for="datepost">Date postulation: </label>
+        <input type="date" name="datepost"><br>
+    
+        <button type="submit">Postuler</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

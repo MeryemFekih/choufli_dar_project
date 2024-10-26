@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Log in</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+	<script src="choufli_dar.js"></script>
+</head>
+<body>
+<div id="background">
+
+	<div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<form action="login.php" method="post" class="log">
+											<h4 class="mb-4 pb-3">Log In</h4>
+											<div class="form-group">
+												<input type="email" class="form-style" name="email-login" id="email-login" placeholder="Email">
+												<span id="text-login"></span>
+											</div>
+											<div class="form-group mt-3">
+												<input type="password" class="form-style" name="pass-login" id="pass-login" placeholder="Password">
+											</div>
+											<button type="submit" class="btn mt-4">Login</button>
+                      						<p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p></form>
+					  
+											
+				      					</div>
+			      					</div>
+			      				</div>
+								<div class="card-back my-2">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-3">Sign Up</h4>
+											<form action="sign_in.php" method="post">
+											
+											<div class="form-group">
+												<input type="text" class="form-style" name="fname" id="fname" placeholder="Full Name">
+											
+										
+											</div>	
+											<div class="form-group mt-3">
+												<input type="date" class="form-style" name="birth" id="birth" placeholder="Birthday">
+												
+											</div>
+											<div class="form-group mt-3">
+												<input type="tel" class="form-style" name="tel" id="tel" placeholder="Phone Number">
+												
+											</div>	
+											<div class="form-group mt-3">
+												<input type="cin" class="form-style" name="cin" id="cin" placeholder="CIN">
+												
+											</div>	
+											
+                      						<div class="form-group mt-3">
+												<input type="email" class="form-style" name="email-sign-in" id="email-sign-in" placeholder="Email">
+												
+											</div>
+											<div class="form-group mt-3">
+												<input type="password" class="form-style" name="pass" id="pass-sign-in" placeholder="Password">
+												
+											</div>
+											<div class="form-group mt-3">
+												Femenin:<input type="radio" name="sexe" value="F">
+												Masculin:<input type="radio" name="sexe" value="M">
+											</div>	
+											<button type="submit"  class="btn mt-3">Register</button></form>
+				      					</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
+</div>
+	<script>
+
+  VANTA.FOG({
+    el: "#background", // Target the div with ID "background"
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xe0a271,
+    midtoneColor: 0xe3c0a1,
+    lowlightColor: 0xffefd5
+  });
+</script>
+</body>
+</html>
